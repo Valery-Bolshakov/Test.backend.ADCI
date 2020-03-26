@@ -1,0 +1,21 @@
+
+.description_text {
+    display: none;
+    width: 250px;
+}
+
+a.text_link:hover + div {
+    display: block;
+}
+
+.class_name {
+
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px;
+    opacity: 0.5;
+    text-align: center;
+    font-weight: 400;
+}

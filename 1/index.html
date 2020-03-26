@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация пользователя</title>
+</head>
+<body>
+<h3><a href="http://Test.backend.ADCI/index.php">Вернуться к оглавлению</a></h3><br>
+
+<h3>Регистрация пользователя</h3>
+
+<style>
+    .registration {
+        width: 450px;
+        height: 500px;
+    }
+</style>
+
+<form action="test1.html" method="post">
+
+    <fieldset class="registration">
+        Имя: <br><input type="text" name="name" required placeholder="Иван"><br><br>
+        Фамилия: <br><input type="text" name="surname" required placeholder="Петров"><br><br>
+        Почта: <br><input type="email" name="email" required placeholder="mail@example.com"><br><br>
+        <hr>
+
+        Курсы: <br> <input type="radio" name="test" value="7"> Drupal 7<br>
+        <input type="radio" name="test" checked value="8"> Drupal 8<br><br>
+
+        Дополнительная информация: <br>
+        <textarea rows="8" cols="40" name="message" placeholder="Знание PHP, CSS JS и SQL"></textarea><br><br>
+
+        <input type="submit" name="submit" value="Отправить">&nbsp;&nbsp;&nbsp;
+        <input type="reset" name="reset" value="Очистить"><br><br>
+    </fieldset>
+</form>
+
+</body>
+</html>

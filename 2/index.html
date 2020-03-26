@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Одностраничное приложение</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<h3><a href="http://Test.backend.ADCI/index.php">Вернуться к оглавлению</a></h3><br>
+
+<div class="container">
+    <h1>Одностраничный статичный сайт</h1>
+
+    <div class="page" id="page1">
+        <input type="text" name="name" id="name_id" required placeholder="Введите Имя">
+        <input type="submit" id="submit_1" value="Далее">
+    </div>
+
+    <div class="page" id="page2">
+        <input type="text" name="surname" id="surname_id" required placeholder="Введите Фамилию">
+        <input type="submit" id="submit_2" value="Далее">
+        <input type="submit" id="submit_2_back" value="Назад">
+    </div>
+
+    <div class="page" id="page3">
+        <input type="email" id="email_id" name="email" required placeholder="Введите Email">
+        <input type="submit" id="submit_3" value="Завершить">
+        <input type="submit" id="submit_3_back" value="Назад">
+    </div>
+
+    <div class="page" id="page4">Спасибо!</div>
+</div>
+
+</body>
+</html>
