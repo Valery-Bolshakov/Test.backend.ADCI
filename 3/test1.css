@@ -1,21 +1,129 @@
-
-.description_text {
-    display: none;
-    width: 250px;
-}
-
-a.text_link:hover + div {
-    display: block;
-}
-
-.class_name {
-
-    background-color: #000000;
-    color: white;
-    font-size: 16px;
-    margin: 10px;
+.wrap {
+    width: 540px;
+    height: 380px;
     padding: 10px;
-    opacity: 0.5;
-    text-align: center;
-    font-weight: 400;
+    border: 1px solid #cc521f;
+    background: #eee;
+    margin:20px auto 10px;
 }
+
+.header {
+    font-size: 25px;
+    width: 540px;
+    height: 30px;
+    position: relative;
+
+}
+.inner-content1 {
+    position: absolute;
+    right: 115px;
+    bottom: 2px;
+    width: 30px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: #cc521f;
+    text-align: center;
+}
+.inner-content2 {
+    position: absolute;
+    right: 60px;
+    bottom: 0;
+}
+.inner-content3 {
+    position: absolute;
+    right: 20px;
+    bottom: 2px;
+    width: 30px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: #cc521f;
+    text-align: center;
+}
+
+.joker {
+    background-image: url("img/joker.jpg");
+    width: 256px;
+    height: 256px;
+    border: 1px solid #ccc;
+    margin: 20px;
+    position: relative;
+    float: left;
+}
+
+.marvel {
+    background-image: url("img/marvel.jpg");
+    width: 200px;
+    height: 286px;
+    border: 1px solid #ccc;
+    margin: 20px;
+    position: relative;
+    float: left;
+}
+
+.click {
+    background-color: black;
+    width: 100px;
+    height: 20px;
+    border-radius: 10px;
+    color: #0b890f;
+    text-align: center;
+    border: 1px solid #000000;
+    position: absolute;
+    left: 50px;
+    bottom: 20px;
+    z-index: 2;
+    opacity: 0.7;
+}
+
+/*.description {
+    text-align: left;
+    color: #4d3cba;
+    visibility: hidden;
+    margin: 15px;
+    opacity: 1;
+    transition: all 1s;
+    font-size: 20px;
+}*/
+
+.background {
+    background-image: url("img/j.jpg");
+    width: 256px;
+    height: 256px;
+    visibility: hidden;
+    /*
+    background-color: #000000;
+    */
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+
+}
+
+.background1 {
+    background-image: url("img/m.jpg");
+    width: 200px;
+    height: 286px;
+    visibility: hidden;
+    /*
+    background-color: #000000;
+    */
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+
+}
+
+.click:hover ~ .background {
+    visibility: visible;
+    opacity: 0.7;
+}
+
+.click:hover ~ .background1 {
+    visibility: visible;
+    opacity: 0.7;
+}
+

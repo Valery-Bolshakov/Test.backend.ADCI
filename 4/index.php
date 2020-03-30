@@ -1,8 +1,5 @@
 <?php
-/**
- * Date: 23.03.2020
- * Time: 3:25
- */
+
 $text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -22,15 +19,15 @@ if (!empty($_REQUEST['find'])) {
     $arr_without_quotes = [];
     $is_quote_first = false;
 
-    $pattern = '/\"[^\"]*\"/';
+    $pattern = '/\"[^\"]*\"/'; // Регулярка для обработки Ключевой строки
     $insight_quotes_arr = [];// массив строк находящихся внутри ковычек
     preg_match_all($pattern, $find, $insight_quotes_arr);
     $insight_quotes_arr = $insight_quotes_arr[0];
-    var_dump($insight_quotes_arr);
+    //var_dump($insight_quotes_arr);
     for ($i = 0; $i < count($insight_quotes_arr); $i++) {
         $find_without_quotes = str_replace("$insight_quotes_arr[$i]", "", "$find_without_quotes");
         // обнуляем строчные значения в ковычках и получим строку без значений в ковычках
-        echo '<br>' . $find_without_quotes, '<br>';
+        //echo '<br>' . $find_without_quotes, '<br>';
     }
 
     $find_without_quotes_arr = explode(' ', $find_without_quotes);
@@ -41,7 +38,7 @@ if (!empty($_REQUEST['find'])) {
     for ($i = 0; $i < count($insight_quotes_arr); $i++) {
         $replace_str = $insight_quotes_arr[$i];
         $replace_str = str_replace("\"", "", "$replace_str");
-        echo $replace_str, '<br>';
+        //echo $replace_str, '<br>';
         $new_text = str_replace("$replace_str", "<b>$replace_str</b>", "$new_text");
     }
 }
@@ -63,7 +60,7 @@ if (!empty($_REQUEST['find'])) {
 
 <form action="" method="post">
     Ключевая строка: <input type="text" name="find" required placeholder="Введите строку"
-                            value="<?php if (!empty($_REQUEST['find'])) echo htmlspecialchars($find); ?>"><br><br/>
+                            value="<?php if (!empty($_REQUEST['find'])) echo htmlspecialchars($find); ?>"> (Вводите двойные ковычки)<br><br/>
     <input type="submit" id="submit" value="Поиск">
     <hr>
 
